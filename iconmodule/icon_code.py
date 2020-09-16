@@ -10,9 +10,16 @@ for i in range (len(seq)):
     if seq [i] == 0:
         seq[i] = "-"
 
-#separate 100 characters into 10 rows of 10:
-line1 = seq[0:10]
+#separate 100 characters into 10 rows of 10:        
+lines = []
+row = 
+start = 
+end = 
+
+lines[row] = seq[start:end]
+    
 line2 = seq[10:20]
+#these lines are repeated, the thing that changes I can make a variable for
 line3 = seq[20:30]
 line4 = seq[30:40]
 line5 = seq[40:50]
@@ -24,6 +31,41 @@ line10 = seq[90:100]
 
 #printing each line to show the icon:
 def visualDisplay():
+    for value in line1:
+        print(value, end='')
+    print('\n')
+    for value in line2:
+        print(value, end='')
+    print('\n')
+    for value in line3:
+        print(value, end='')
+    print('\n')
+    for value in line4:
+        print(value, end='')
+    print('\n')
+    for value in line5:
+        print(value, end='')
+    print('\n')
+    for value in line6:
+        print(value, end='')
+    print('\n')
+    for value in line7:
+        print(value, end='')
+    print('\n')
+    for value in line8:
+        print(value, end='')
+    print('\n')
+    for value in line9:
+        print(value, end='')
+    print('\n')
+    for value in line10:
+        print(value, end='')
+    print('\n')
+    
+def Display():
+    
+    for
+    
     for value in line1:
         print(value, end='')
     print('\n')
