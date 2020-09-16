@@ -9,8 +9,6 @@ d = {}
 
 with open('string_formatting.txt') as f:
     for line in f:
-        (key, val) = line.split()
-        d[key] = val
-        print ("Good evening Dr.", val, ",", "would you ming if I called you",
-                  key, "?")
-
+        (first, last) = line.split()
+        d[first] = last
+        print ("Good evening Dr. {lname}, would you mind if I called you {fname}?".format(lname = last, fname = first))
