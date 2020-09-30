@@ -1,26 +1,26 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 16 19:52:19 2020
-
-@author: chelr
-"""
-
 import json
 
+projects_json = {}
 
-with open ('capitalprojects.geojson', 'r') as projects:
+with open ("capitalprojects.geojson", "r") as projects:
     projects_json = json.load(projects)
 
-#first line accesses the list of dictionaries after "features:"
-for project in projects_json['features']:
-    
-    #nested loop accesses each dictionary after "properties"
-    for x in project['properties'].items():
-        print("***Project Profile***")
+
+#the below finds and prints the ID numbers of the projects with no area name
+features = projects_json['features']#list     
+for entry in features:
+    properties = entry['properties']#dict
         
-        #access and print the key:value for the properties' dictionaries
-        for key, value in project['properties'].items():
-            print(key + ':', value)
-            
-        #adds a space in between each project for better appearance    
-        print("")
+    for x, y in properties.items():
+        if x == 'id':
+            id_number = str(y)
+            #print(id_number) 
+             
+    for key, value in properties.items():
+        if key == 'area':
+            blank_values = []
+            if value == "": #check if keys are blank, add to a list?
+                blank_values.append(id_number)
+                print("This project is missing a value for 'area':", blank_values)
+        else:
+            continue
