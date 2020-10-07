@@ -1,3 +1,6 @@
+#so far the code is able to print data for any movie title + year requested
+
+
 import requests, json
 
 my_key = 'f7d58ebc'
